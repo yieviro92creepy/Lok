@@ -1,0 +1,137 @@
+-- DEFINE LIBRARY
+
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+
+--DEFINE WINDOW
+
+local Window = OrionLib:MakeWindow({Name = "Doors by yieviro92  Key System", HidePremium = false, SaveConfig = false, ConfigFolder = "droaa", IntroEnabled = false})
+
+-- DEFINE TABS
+
+local KSTab = Window:MakeTab({
+
+	Name = "Key System",	Icon = " ",
+
+	PremiumOnly = false
+
+})
+
+local CRTab = Window:MakeTab({
+
+	Name = "Credits",
+
+	Icon = " ",
+
+	PremiumOnly = false
+
+})
+
+-- DEFINE KEYSYSTEM TAB
+
+local Section = KSTab:AddSection({
+
+	Name = "Key System"
+
+})
+
+_G.Key = "freekey"
+
+_G.KeyInput = "string"
+
+function CorrectKey()
+
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/yieviro92creepy/Awesome/main/Lol1'))()
+
+end
+
+function CorrectKeyMessage()
+
+    OrionLib:MakeNotification({
+
+	Name = "Key System",
+
+	Content = "You've entered the correct key!",
+
+	Image = " ",
+
+	Time = 4
+
+    })
+
+    wait(1)
+
+    OrionLib:Destroy()
+
+end
+
+function WrongKeyMessage()
+
+    OrionLib:MakeNotification({
+
+	Name = "Key System",
+
+	Content = "That's not the correct key!",
+
+	Image = " ",
+
+	Time = 4
+
+    })
+
+end
+
+KSTab:AddTextbox({
+
+	Name = "Enter Key",
+
+	Default = "",
+
+	TextDisappear = false,
+
+	Callback = function(keycode)
+
+		_G.KeyInput = keycode
+
+	end	  
+
+})
+
+KSTab:AddButton({
+
+	Name = "Check Key",
+
+	Callback = function()
+
+  		if _G.KeyInput == _G.Key then
+
+               CorrectKeyMessage()
+
+               CorrectKey()
+
+          else
+
+               WrongKeyMessage()
+
+          end
+
+	end    
+
+})
+
+local Section = KSTab:AddSection({
+
+	Name = "awesome"
+
+})
+
+KSTab:AddLabel("U mad bro?")
+
+KSTab:AddLabel("Dumbbbb")
+
+-- DEFINE CREDITS TAB
+
+CRTab:AddLabel("Thanks to execute")
+
+CRTab:AddLabel("Credit to yieviro92creepy")
+
+OrionLib:Init()
