@@ -34,7 +34,7 @@ local Section = KSTab:AddSection({
 
 })
 
-_G.Key = "freekey"
+_G.Key = "SkidLmao"
 
 _G.KeyInput = "string"
 
