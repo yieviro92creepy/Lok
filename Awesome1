@@ -40,7 +40,7 @@ _G.KeyInput = "string"
 
 function CorrectKey()
 
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/yieviro92creepy/Awesome/main/Lol1'))()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/yieviro92creepy/Phew/main/Oof'))()
 
 end
 
